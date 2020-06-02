@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Recipe from './Recipe/Recipe.js';
+import Recipe from './Recipe';
 import Footer from './Footer';
 
 function App() {

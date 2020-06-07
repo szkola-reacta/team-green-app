@@ -1,7 +1,7 @@
 import React from 'react';
 import './Style/dashboard.css';
+import My from '../Recipe/My';
 //import Overview from './Overview';
-import Add from '../Recipe/Add';
 
 function Dashboard(){
     return(
@@ -24,11 +24,10 @@ function Dashboard(){
                 <a className="active" href="#">Overview</a>
                 <a href="#">Moje przepisy</a>
                 <a href="#">Ulubione przepisy</a>
-                <a href="#">Dodaj przepis</a>
                 <a href="#">Ustawienia</a>
             </div>
             <div className="dashboardContent">
-                <Add />
+                <My />
             </div>
         </div>
     );

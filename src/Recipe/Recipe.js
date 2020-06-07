@@ -6,12 +6,12 @@ import Container from './Components/Description/container';
 
 
 
-function Recipe() {
+function Recipe({ recipe }) {
     return (
         <div>
-            <Title title="Kluski śląskie" />
-            <Images images="kluski" />
-            <Container />
+            <Title title={recipe.title} />
+            <Images images={recipe.image} />
+            <Container recipe={recipe} />
         </div>
     );
 }

@@ -6,17 +6,17 @@ import Ingredients from './ingredients';
 import Recipe from './recipe';
 import Allergen from './allergen';
 
-function Container(){
+function Container({ recipe }) {
     return(
         <div>
             <TitleTab title="OPIS" />
-            <Description desc="rodzaj klusek ziemniaczanych przygotowanych z gotowanych ziemniaków i mąki, formowane w mocno spłaszczone kulki z wgłębieniem, gotowane w osolonym wrzątku. Kluski śląskie wpisane są na Listę produktów tradycyjnych województwa opolskiego oraz osobno śląskiego." />
+            <Description desc={recipe.description} />
             <TitleTab title="SKŁADNIKI" />
-            <Ingredients />
+            <Ingredients ingredients={recipe.ingredients} />
             <TitleTab title="Przygotowanie" />
-            <Recipe />
+            <Recipe recipe={recipe.recipe} />
             <TitleTab title="Alergeny" />
-            <Allergen allergen="gluten, soja, seler, mleko" />
+            <Allergen allergen={recipe.allergen} />
         </div>
     );
 }

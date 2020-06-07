@@ -1,5 +1,7 @@
 import React from 'react';
 import './Style/dashboard.css';
+//import Overview from './Overview';
+import Add from '../Recipe/Add';
 
 function Dashboard(){
     return(
@@ -22,25 +24,11 @@ function Dashboard(){
                 <a className="active" href="#">Overview</a>
                 <a href="#">Moje przepisy</a>
                 <a href="#">Ulubione przepisy</a>
+                <a href="#">Dodaj przepis</a>
+                <a href="#">Ustawienia</a>
             </div>
-            <div className="content">
-                <div id="Overview">
-                    <h2>Panel kontrolny</h2>
-                    <div className="userStatisticIcon">
-                        <div className="userStatIcon">
-                            <img src="#" alt="icon" />
-                            <h3>Dodane przepisy</h3>
-                        </div>
-                        <div className="userStatIcon">
-                            <img src="#" alt="icon" />
-                            <h3>Dodanych jako ulubione</h3>
-                        </div>
-                        <div className="userStatIcon">
-                            <img src="#" alt="icon" />
-                            <h3>Ilość wyświetleń twoich przepisów</h3>
-                        </div>
-                    </div>
-                </div>
+            <div className="dashboardContent">
+                <Add />
             </div>
         </div>
     );

@@ -1,6 +1,5 @@
 import React from 'react';
 import './AddRecipe.css';
-import Header from "./Components/Header"
 
 class AddRecipe extends React.Component{
     state = {

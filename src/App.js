@@ -1,5 +1,22 @@
 import React from 'react';
 import './App.css';
+import Dashboard from './User/Dashboard/Dashboard';
+
+import AddRecipe from './Components/AddRecipe';
+import Header from './Components/Header';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <AddRecipe />
+    </div>
+  );
+}
+
+export default App;
+
+
 import Footer from './Footer';
 import Content from './Content';
 

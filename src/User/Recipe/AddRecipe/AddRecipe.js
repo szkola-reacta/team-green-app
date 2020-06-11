@@ -1,6 +1,5 @@
 import React from 'react';
 import './AddRecipe.css';
-import Header from "./Components/Header"
 
 class AddRecipe extends React.Component{
     state = {
@@ -19,7 +18,7 @@ class AddRecipe extends React.Component{
         this.setState({recipe: event.target.value});
     }
     handleCheckboxChange = (event) => {
-        this.setState({sure: event.target.chacked});
+        this.setState({sure: event.target.checked});
     }
     render(){
         return(
@@ -48,7 +47,7 @@ class AddRecipe extends React.Component{
                     </label>
                     <br />
                     <label>Czy to koniec?
-                        <input type="checkbox" onChange={this.handleCheckboxChange} chacked={this.state.sure} />
+                        <input type="checkbox" onChange={this.handleCheckboxChange} checked={this.state.sure} />
                     </label>
                     <br />
                     <input type="submit" value="Zapisz" className="btn" />

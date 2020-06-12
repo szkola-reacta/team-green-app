@@ -1,43 +1,22 @@
 import React from 'react';
 import './App.css';
-import Dashboard from './User/Dashboard/Dashboard';
 
-import AddRecipe from './Components/AddRecipe';
-import Header from './Components/Header';
-
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <AddRecipe />
-    </div>
-  );
-}
-
-export default App;
-
-
+import Header from './Header';
+import Home from './Home/Home';
 import Footer from './Footer';
-import Content from './Content';
+import Container from '@material-ui/core/Container';
 
 class App extends React.Component {
 
-  state = {
-    recipes: []
-  }
-
-  componentDidMount() {
-      fetch('./database.json')
-      .then(response => response.json())
-      .then(data => this.setState({ recipes: data }));
-  }
 
   render() {
-    const { recipes } = this.state;
     return (
       <div className="App">
-        <Content recipes={recipes} />
-        <Footer />
+        <Container maxWidth="lg">
+          <Header />
+          <Home />
+          <Footer />
+        </Container>
       </div>
     );
   }
